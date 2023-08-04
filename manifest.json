@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "YT Long Format",
+  "version": "1.2023.8.2",
+  "description": "Hide recommanded YouTube videos shorter than 15 minutes.",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches":  ["https://www.youtube.com/*"],
+      "js": ["content_script.js"]
+    }
+  ]
+}
